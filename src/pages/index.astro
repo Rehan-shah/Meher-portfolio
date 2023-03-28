@@ -18,7 +18,7 @@ import Navbar from "../compents/navbar.astro";
     />
     <script is:inline src="https://code.jquery.com/jquery-3.6.0.min.js"
     ></script>
-    <title>Astro</title>
+    <title>Meher Shah</title>
   </head>
   <body>
     <style>
@@ -72,19 +72,5 @@ import Navbar from "../compents/navbar.astro";
       </div>
       <div class="imgs ml-[15vh] mt-[2vw]"><Imgs client:load /></div>
     </div>
-    <script is:inline>
-      $(document).ready(function () {
-        const $slides = $(".i h1");
-        let currentSlide = 0;
-        const interval = 3000;
-        setInterval(() => {
-          $($slides.eq(currentSlide)).css("font-weight", "900");
-          setInterval(() => {
-            $($slides.eq(currentSlide)).css("font-weight", "700");
-            currentSlide = (currentSlide + 1) % $slides.length;
-          }, 2900);
-        }, interval);
-      });
-    </script>
   </body>
 </html>
