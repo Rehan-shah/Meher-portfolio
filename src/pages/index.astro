@@ -1,15 +1,90 @@
 ---
+import "../inde.css";
+import Imgs from "../compents/images";
+import Navbar from "../compents/navbar.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script is:inline src="https://code.jquery.com/jquery-3.6.0.min.js"
+    ></script>
+    <title>Astro</title>
+  </head>
+  <body>
+    <style>
+      h1,
+      h2,
+      h3,
+      p {
+        font-family: Roboto, sans-serif;
+      }
+
+      .flex h1 {
+        font-weight: 700;
+        font-size: 2rem;
+        color: #d31c5d;
+      }
+      .flex p {
+        padding-bottom: 7px;
+      }
+      .flex {
+        align-items: flex-end;
+        padding-bottom: 30px;
+      }
+    </style>
+    <Navbar />
+    <div class="carousel-container">
+      <div class="text">
+        <div class="mt-48 ml-10">
+          <h2 class="pb-10">Worked on</h2>
+          <!-- <div class="grid grid-rows-4 grid-cols-5"> -->
+          <div class="flex i hover:underline">
+            <p>.01</p>
+            <h1 class="pl-2 bold hover:underline">Institutional</h1>
+          </div>
+
+          <div class="flex i hover:underline">
+            <p>.02</p>
+            <h1 class="pl-2 hover:underline">Competition</h1>
+          </div>
+
+          <div class="flex i hover:underline">
+            <p>.03</p>
+            <h1 class="pl-2 hover:underline">Residential</h1>
+          </div>
+
+          <div class="flex i hover:underline">
+            <p>.04</p>
+            <h1 class="pl-2 hover:underline">Aadaptive reuse</h1>
+          </div>
+          <!-- </div> -->
+        </div>
+      </div>
+      <div class="imgs ml-[15vh] mt-[2vw]"><Imgs client:load /></div>
+    </div>
+    <script is:inline>
+      $(document).ready(function () {
+        const $slides = $(".i h1");
+        let currentSlide = 0;
+        const interval = 3000;
+        setInterval(() => {
+          $($slides.eq(currentSlide)).css("font-weight", "900");
+          setInterval(() => {
+            $($slides.eq(currentSlide)).css("font-weight", "700");
+            currentSlide = (currentSlide + 1) % $slides.length;
+          }, 2900);
+        }, interval);
+      });
+    </script>
+  </body>
 </html>

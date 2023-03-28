@@ -1,0 +1,30 @@
+---
+import Navbar from "../compents/navbar.astro";
+---
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="generator" content={Astro.generator} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+    rel="stylesheet"
+  />
+  <script is:inline src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <title>Astro</title>
+</head>
+<Navbar />
+<div class="ml-[50vh]">
+  <img height="100vh" style="height: 100vh;" src="Cv portfolio.jpg" />
+  <img
+    height="100vh"
+    style="height: 100vh;
+    position: relative;
+    z-index: -1;
+    top: -120px;"
+    src="Cv portfolio2.jpg"
+  />
+</div>
