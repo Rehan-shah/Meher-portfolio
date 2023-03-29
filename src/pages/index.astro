@@ -42,6 +42,12 @@ import Navbar from "../compents/navbar.astro";
         align-items: flex-end;
         padding-bottom: 30px;
       }
+
+      .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     </style>
     <Navbar />
     <div class="carousel-container">
@@ -72,19 +78,19 @@ import Navbar from "../compents/navbar.astro";
           <div class="flex i hover:underline">
             <p>.04</p>
             <h1 class="pl-2 hover:underline">
-              <a href="/aadpative_reuse">Adpative reuse</a>
+              <a href="/adpative_reuse">Adpative reuse</a>
             </h1>
           </div>
 
           <div class="flex i hover:underline">
             <p>.05</p>
             <h1 class="pl-2 hover:underline">
-              <a href="/Feild_studio">Field studio</a>
+              <a href="/Feild_Studio">Feild studio</a>
             </h1>
           </div>
         </div>
       </div>
-      <div class="imgs ml-[15vh] mt-[2vw]"><Imgs client:load /></div>
+      <div class="imgs mt-[2vw]"><Imgs client:load /></div>
     </div>
   </body>
 </html>

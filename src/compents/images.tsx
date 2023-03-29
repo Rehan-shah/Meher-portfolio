@@ -20,9 +20,8 @@ function Imgs() {
       {
         imgs.map((imgsrc, i) => {
           let w = 375 + i * 30
-          //         if(i = 0){
-          // animation = 
-          //         }
+          // if(i = 0){
+          // }
           return <img style={{ width: w + "px", left: i * 20 + 50, bottom: i * -20 + 130 }} className={`-z-${i * 10} absolute border border-[#CCCCCC] flex justify-center`} src={imgsrc} />
 
         })
