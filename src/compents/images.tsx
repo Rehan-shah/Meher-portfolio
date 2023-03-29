@@ -22,7 +22,7 @@ function Imgs() {
           let w = 375 + i * 30
           // if(i = 0){
           // }
-          return <img style={{ width: w + "px", left: i * 2 + 5 + "%", bottom: i * -20 + 130 }} className={`-z-${i * 10} absolute border border-[#CCCCCC] flex justify-center`} src={imgsrc} />
+          return <img style={{ width: w + "px", left: i * 2 + 8 + "%", bottom: i * -20 + 130 }} className={`-z-${i * 10} absolute border border-[#CCCCCC] flex justify-center`} src={imgsrc} />
 
         })
       }
