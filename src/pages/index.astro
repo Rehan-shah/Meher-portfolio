@@ -36,6 +36,7 @@ import Navbar from "../compents/navbar.astro";
       }
       .flex p {
         padding-bottom: 7px;
+        margin-right: 25px;
       }
       .flex {
         align-items: flex-end;
@@ -46,28 +47,41 @@ import Navbar from "../compents/navbar.astro";
     <div class="carousel-container">
       <div class="text">
         <div class="mt-48 ml-10">
-          <h2 class="pb-10">Worked on</h2>
-          <!-- <div class="grid grid-rows-4 grid-cols-5"> -->
+          <h2 class="pb-16">Worked on</h2>
           <div class="flex i hover:underline">
             <p>.01</p>
-            <h1 class="pl-2 bold hover:underline">Institutional</h1>
+            <h1 class="pl-2 bold hover:underline">
+              <a href="/institutional">Institutional</a>
+            </h1>
           </div>
 
           <div class="flex i hover:underline">
             <p>.02</p>
-            <h1 class="pl-2 hover:underline">Competition</h1>
+            <h1 class="pl-2 hover:underline">
+              <a href="/competition">Competition</a>
+            </h1>
           </div>
 
           <div class="flex i hover:underline">
             <p>.03</p>
-            <h1 class="pl-2 hover:underline">Residential</h1>
+            <h1 class="pl-2 hover:underline">
+              <a href="Residential">Residential</a>
+            </h1>
           </div>
 
           <div class="flex i hover:underline">
             <p>.04</p>
-            <h1 class="pl-2 hover:underline">Aadaptive reuse</h1>
+            <h1 class="pl-2 hover:underline">
+              <a href="/aadpative_reuse">Adpative reuse</a>
+            </h1>
           </div>
-          <!-- </div> -->
+
+          <div class="flex i hover:underline">
+            <p>.05</p>
+            <h1 class="pl-2 hover:underline">
+              <a href="/Feild_studio">Field studio</a>
+            </h1>
+          </div>
         </div>
       </div>
       <div class="imgs ml-[15vh] mt-[2vw]"><Imgs client:load /></div>
